@@ -38,7 +38,7 @@ enum custom_keycodes {
 #define KC_SFSP  SFT_T(KC_SPC)
 
 #define KC_CTPL LCTL_T(KC_BSLS)  // SingleTap -> `\` | DualTap -> Ctrl(L)
-#define SPCE_RASE LT(RAISE, KC_SPC) // SingleTap -> ` ` | DualTap -> RAISE
+#define SPCE_LOWR LT(LOWER, KC_SPC) // SingleTap -> ` ` | DualTap -> LOWER
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT( \
@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|-------+-------+-------+-------+-------|                  |----------+-------+-------+-------+-------|
         KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,                      KC_N,   KC_M,   KC_COMM,KC_DOT, KC_SLSH,\
   //|-------+-------+-------+-------+-------+--------|  |-------+---------+-------+-------+-------+-------|
-     KC_LSFT, KC_SPC,KC_LALT,KC_LGUI,  LOWER, KC_BSPC,   KC_ENT, SPCE_RASE,KC_RALT,KC_RCTL,KC_F11, KC_F12 \
+     KC_CTPL, KC_SPC,KC_LALT,KC_LSFT, KC_LGUI, KC_BSPC,   KC_ENT, SPCE_LOWR,KC_RALT,KC_RCTL,KC_F11, KC_F12 \
   //|-------+-------+-------+-------+-------+--------|  |-------+---------+-------+-------+-------+-------|
   ),
 
